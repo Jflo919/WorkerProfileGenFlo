@@ -20,10 +20,19 @@ test("Get Employee's id", () => {
     const employee = new Employee('Julian', 'floydjulian1991@gmail.com');
 
     expect(employee.getId()).toBeTruthy();
-})
+});
 
+test("Get Employee's email", () => {
+    const employee = new Employee('Julian', 'floydjulian1991@gmail.com');
 
+    expect(employee.getEmail()).toEqual(expect.stringContaining('floydjulian1991@gmail.com'));
+});
 
+test("Get Employee's role", () => {
+    const employee = new Employee('Julian', 'floydjulian1991@gmail.com');
+
+    expect(employee.getRole()).toEqual(expect.stringContaining('Employee'));
+});
 
 
 
