@@ -10,7 +10,17 @@ test('creates an employee object', () => {
     expect(employee.email).toBe('floydjulian1991@gmail.com');
 });
 
+test("Get Employee's name", () => {
+    const employee = new Employee('Julian', 'floydjulian1991@gmail.com');
 
+    expect(employee.getName()).toEqual(expect.stringContaining('Julian'));
+});
+
+test("Get Employee's id", () => {
+    const employee = new Employee('Julian', 'floydjulian1991@gmail.com');
+
+    expect(employee.getId()).toBeTruthy();
+})
 
 
 
