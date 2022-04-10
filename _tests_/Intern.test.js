@@ -7,3 +7,10 @@ test('create an Intern object', () => {
     expect(intern.role).toBe('Intern');
     expect(intern.school).toBe('UCSC');
 });
+
+test("Get Intern's school", () => {
+    const intern = new Intern('', '', '', 'Intern', 'UCSC');
+
+    expect(intern.getSchool()).toEqual(expect.stringContaining('UCSC'));
+    expect(intern.getRole()).toEqual(expect.stringContaining('Intern'));
+});
